@@ -1,0 +1,81 @@
+D:\Code Test\WebBanHang\BanVeTau\BanVeTau\bin\BanVeTau.dll.config
+D:\Code Test\WebBanHang\BanVeTau\BanVeTau\bin\BanVeTau.dll
+D:\Code Test\WebBanHang\BanVeTau\BanVeTau\bin\BanVeTau.pdb
+D:\Code Test\WebBanHang\BanVeTau\BanVeTau\obj\Debug\BanVeTau.csprojResolveAssemblyReference.cache
+D:\Code Test\WebBanHang\BanVeTau\BanVeTau\obj\Debug\BanVeTau.dll
+D:\Code Test\WebBanHang\BanVeTau\BanVeTau\obj\Debug\BanVeTau.pdb
+D:\Code Test\WebBanHang\BanVeTau\BanVeTau\bin\EntityFramework.dll
+D:\Code Test\WebBanHang\BanVeTau\BanVeTau\bin\EntityFramework.SqlServer.dll
+D:\Code Test\WebBanHang\BanVeTau\BanVeTau\bin\EntityFramework.xml
+D:\Code Test\WebBanHang\BanVeTau\BanVeTau\bin\EntityFramework.SqlServer.xml
+C:\Users\MyPC\Downloads\BanVeTau\BanVeTau\bin\ApplicationInsights.config
+C:\Users\MyPC\Downloads\BanVeTau\BanVeTau\bin\BanVeTau.dll.config
+C:\Users\MyPC\Downloads\BanVeTau\BanVeTau\bin\BanVeTau.dll
+C:\Users\MyPC\Downloads\BanVeTau\BanVeTau\bin\BanVeTau.pdb
+C:\Users\MyPC\Downloads\BanVeTau\BanVeTau\bin\EntityFramework.dll
+C:\Users\MyPC\Downloads\BanVeTau\BanVeTau\bin\EntityFramework.SqlServer.dll
+C:\Users\MyPC\Downloads\BanVeTau\BanVeTau\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\MyPC\Downloads\BanVeTau\BanVeTau\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\MyPC\Downloads\BanVeTau\BanVeTau\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\MyPC\Downloads\BanVeTau\BanVeTau\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\MyPC\Downloads\BanVeTau\BanVeTau\bin\Microsoft.AI.Web.dll
+C:\Users\MyPC\Downloads\BanVeTau\BanVeTau\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\MyPC\Downloads\BanVeTau\BanVeTau\bin\Microsoft.ApplicationInsights.dll
+C:\Users\MyPC\Downloads\BanVeTau\BanVeTau\bin\EntityFramework.xml
+C:\Users\MyPC\Downloads\BanVeTau\BanVeTau\bin\EntityFramework.SqlServer.xml
+C:\Users\MyPC\Downloads\BanVeTau\BanVeTau\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\MyPC\Downloads\BanVeTau\BanVeTau\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\MyPC\Downloads\BanVeTau\BanVeTau\bin\Microsoft.AI.Web.xml
+C:\Users\MyPC\Downloads\BanVeTau\BanVeTau\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\MyPC\Downloads\BanVeTau\BanVeTau\bin\Microsoft.ApplicationInsights.xml
+C:\Users\MyPC\Downloads\BanVeTau\BanVeTau\obj\Debug\BanVeTau.csprojResolveAssemblyReference.cache
+C:\Users\MyPC\Downloads\BanVeTau\BanVeTau\obj\Debug\BanVeTau.dll
+C:\Users\MyPC\Downloads\BanVeTau\BanVeTau\obj\Debug\BanVeTau.pdb
+G:\asp.net\BanVeTau\BanVeTau\bin\ApplicationInsights.config
+G:\asp.net\BanVeTau\BanVeTau\bin\BanVeTau.dll.config
+G:\asp.net\BanVeTau\BanVeTau\bin\BanVeTau.dll
+G:\asp.net\BanVeTau\BanVeTau\bin\BanVeTau.pdb
+G:\asp.net\BanVeTau\BanVeTau\bin\AjaxControlToolkit.dll
+G:\asp.net\BanVeTau\BanVeTau\bin\EntityFramework.dll
+G:\asp.net\BanVeTau\BanVeTau\bin\EntityFramework.SqlServer.dll
+G:\asp.net\BanVeTau\BanVeTau\bin\Microsoft.AI.Agent.Intercept.dll
+G:\asp.net\BanVeTau\BanVeTau\bin\Microsoft.AI.DependencyCollector.dll
+G:\asp.net\BanVeTau\BanVeTau\bin\Microsoft.AI.PerfCounterCollector.dll
+G:\asp.net\BanVeTau\BanVeTau\bin\Microsoft.AI.ServerTelemetryChannel.dll
+G:\asp.net\BanVeTau\BanVeTau\bin\Microsoft.AI.Web.dll
+G:\asp.net\BanVeTau\BanVeTau\bin\Microsoft.AI.WindowsServer.dll
+G:\asp.net\BanVeTau\BanVeTau\bin\Microsoft.ApplicationInsights.dll
+G:\asp.net\BanVeTau\BanVeTau\bin\EntityFramework.xml
+G:\asp.net\BanVeTau\BanVeTau\bin\EntityFramework.SqlServer.xml
+G:\asp.net\BanVeTau\BanVeTau\bin\Microsoft.AI.DependencyCollector.xml
+G:\asp.net\BanVeTau\BanVeTau\bin\Microsoft.AI.ServerTelemetryChannel.xml
+G:\asp.net\BanVeTau\BanVeTau\bin\Microsoft.AI.Web.xml
+G:\asp.net\BanVeTau\BanVeTau\bin\Microsoft.AI.WindowsServer.xml
+G:\asp.net\BanVeTau\BanVeTau\bin\Microsoft.ApplicationInsights.xml
+G:\asp.net\BanVeTau\BanVeTau\obj\Debug\BanVeTau.dll
+G:\asp.net\BanVeTau\BanVeTau\obj\Debug\BanVeTau.pdb
+G:\asp.net\BanVeTau\BanVeTau\obj\Debug\BanVeTau.csprojResolveAssemblyReference.cache
+D:\Project\H2\BanVeTau\bin\ApplicationInsights.config
+D:\Project\H2\BanVeTau\bin\BanVeTau.dll.config
+D:\Project\H2\BanVeTau\bin\BanVeTau.dll
+D:\Project\H2\BanVeTau\bin\BanVeTau.pdb
+D:\Project\H2\BanVeTau\bin\AjaxControlToolkit.dll
+D:\Project\H2\BanVeTau\bin\EntityFramework.dll
+D:\Project\H2\BanVeTau\bin\EntityFramework.SqlServer.dll
+D:\Project\H2\BanVeTau\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Project\H2\BanVeTau\bin\Microsoft.AI.DependencyCollector.dll
+D:\Project\H2\BanVeTau\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Project\H2\BanVeTau\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Project\H2\BanVeTau\bin\Microsoft.AI.Web.dll
+D:\Project\H2\BanVeTau\bin\Microsoft.AI.WindowsServer.dll
+D:\Project\H2\BanVeTau\bin\Microsoft.ApplicationInsights.dll
+D:\Project\H2\BanVeTau\bin\EntityFramework.xml
+D:\Project\H2\BanVeTau\bin\EntityFramework.SqlServer.xml
+D:\Project\H2\BanVeTau\bin\Microsoft.AI.DependencyCollector.xml
+D:\Project\H2\BanVeTau\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Project\H2\BanVeTau\bin\Microsoft.AI.Web.xml
+D:\Project\H2\BanVeTau\bin\Microsoft.AI.WindowsServer.xml
+D:\Project\H2\BanVeTau\bin\Microsoft.ApplicationInsights.xml
+D:\Project\H2\BanVeTau\obj\Debug\BanVeTau.csprojResolveAssemblyReference.cache
+D:\Project\H2\BanVeTau\obj\Debug\BanVeTau.dll
+D:\Project\H2\BanVeTau\obj\Debug\BanVeTau.pdb

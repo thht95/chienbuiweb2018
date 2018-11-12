@@ -1,0 +1,20 @@
+﻿[
+    {
+        "IdSieuThiUaThich": 1,
+        "TenSieuThiUaThich": "Big C Long Bien",
+        "TenMatHangUaThich": "s",
+        "GiaCaMHUT": 11111,
+        "HinhAnhMHUT": "/Content/Images.hinh1.jpg",
+        "TrangThai": null,
+        "CuocPhiVC": "Miễn phí vận chuyển với đơn hàng lớn hơn 500k"
+    },
+    {
+        "IdSieuThiUaThich": 1,
+        "TenSieuThiUaThich": "Big C Long Bien",
+        "TenMatHangUaThich": "223sfsdf",
+        "GiaCaMHUT": null,
+        "HinhAnhMHUT": "/Content/Images.hinh2.jpg",
+        "TrangThai": null,
+        "CuocPhiVC": "Miễn phí vận chuyển với đơn hàng lớn hơn 500k"
+    }
+]

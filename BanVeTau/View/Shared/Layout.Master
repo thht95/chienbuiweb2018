@@ -1,0 +1,107 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout.master.cs" Inherits="BanVeTau.View.Shared.Layout" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title></title>
+    <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../../Content/style.css">
+</head>
+<body>
+    <form runat="server" id="form1">
+        <section>
+            <div id="top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3">
+                            <div class="logo">
+                                <a href="#">
+                                    <img src="img/logo.png"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-9 col-sm-9 logo-text">
+                            <h2>you are not alone</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <header>
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="main-menu">
+                        <ul class="nav navbar-nav">
+                            <li><a href="../../Default.aspx">TRANG CHỦ</a></li>
+                            <li><a href="../../ChuyenTau.aspx">CHUYẾN TÀU</a></li>
+                            <li><a href="../../GioiThieu.aspx">GIỚI THIỆU</a></li>
+                            <li><a href="../../LienHe.aspx">LIÊN HỆ</a></li>
+                        </ul>
+
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+        </header>
+
+         <div class="container">
+             <asp:ScriptManager ID="sm2" runat="server"></asp:ScriptManager>
+            <asp:ContentPlaceHolder runat="server" ID="contentID"></asp:ContentPlaceHolder>
+        </div>
+        <div class="bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="contact-form">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="contact-info">
+                            <div class="contact-title">
+                                <p>Liên hệ</p>
+                            </div>
+                            <ul>
+                                <li>
+                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                    <p>vietkylan@gmail.com</p>
+                                </li>
+                                <li>
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                    <p>0988079156 </p>
+                                </li>
+                                <li>
+                                    <i class="fa  fa-map-marker" aria-hidden="true"></i>
+                                    <p>96 Định Công - Hà Nội</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+       
+
+        <div class="footer">
+            <div class="container"> 
+               
+                <p>&copy; Copyright <%# System.DateTime.Now.Year.ToString() %> </p>
+            </div>
+        </div>
+    </form>
+    <script src="../../Scripts/jquery-1.12.4.min.js"></script>
+    <script src="../../Scripts/bootstrap.min.js"></script>
+    <script src="../../Scripts/scripts.js"></script>
+</body>
+</html>

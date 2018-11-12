@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BanVeTauModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="BanVeTauEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ChangTaus" EntityType="BanVeTauModel.ChangTau" />
+    <EntitySet Name="DonHangs" EntityType="BanVeTauModel.DonHang" />
+    <EntitySet Name="GaDens" EntityType="BanVeTauModel.GaDen" />
+    <EntitySet Name="GaDis" EntityType="BanVeTauModel.GaDi" />
+    <EntitySet Name="KhachHangs" EntityType="BanVeTauModel.KhachHang" />
+    <EntitySet Name="sysdiagrams" EntityType="BanVeTauModel.sysdiagram" />
+    <EntitySet Name="Users" EntityType="BanVeTauModel.User" />
+    <AssociationSet Name="FK_ChangTau_GaDen" Association="BanVeTauModel.FK_ChangTau_GaDen">
+      <End Role="GaDen" EntitySet="GaDens" />
+      <End Role="ChangTau" EntitySet="ChangTaus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChangTau_GaDi" Association="BanVeTauModel.FK_ChangTau_GaDi">
+      <End Role="GaDi" EntitySet="GaDis" />
+      <End Role="ChangTau" EntitySet="ChangTaus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DonHang_ChangTau" Association="BanVeTauModel.FK_DonHang_ChangTau">
+      <End Role="ChangTau" EntitySet="ChangTaus" />
+      <End Role="DonHang" EntitySet="DonHangs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DonHang_KhachHang" Association="BanVeTauModel.FK_DonHang_KhachHang">
+      <End Role="KhachHang" EntitySet="KhachHangs" />
+      <End Role="DonHang" EntitySet="DonHangs" />
+    </AssociationSet>
+    <FunctionImport Name="ThemDonHang">
+      <Parameter Name="KhachHangID" Mode="In" Type="Int32" />
+      <Parameter Name="ChangID" Mode="In" Type="Int32" />
+      <Parameter Name="DaDat" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="ChangTau">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaChuyenDi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TenChuyenDi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DiemDi" Type="Int32" />
+    <Property Name="DiemDen" Type="Int32" />
+    <Property Name="NgayDi" Type="DateTime" Precision="3" />
+    <Property Name="NgayDen" Type="DateTime" Precision="3" />
+    <Property Name="SoLuongChang" Type="Int32" />
+    <Property Name="GiaVe" Type="Int32" />
+    <Property Name="DaDat" Type="Boolean" />
+    <Property Name="IsLocked" Type="Boolean" />
+    <NavigationProperty Name="GaDen" Relationship="BanVeTauModel.FK_ChangTau_GaDen" FromRole="ChangTau" ToRole="GaDen" />
+    <NavigationProperty Name="GaDi" Relationship="BanVeTauModel.FK_ChangTau_GaDi" FromRole="ChangTau" ToRole="GaDi" />
+    <NavigationProperty Name="DonHangs" Relationship="BanVeTauModel.FK_DonHang_ChangTau" FromRole="ChangTau" ToRole="DonHang" />
+  </EntityType>
+  <EntityType Name="DonHang">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KhachHangId" Type="Int32" />
+    <Property Name="ChangId" Type="Int32" />
+    <NavigationProperty Name="ChangTau" Relationship="BanVeTauModel.FK_DonHang_ChangTau" FromRole="DonHang" ToRole="ChangTau" />
+    <NavigationProperty Name="KhachHang" Relationship="BanVeTauModel.FK_DonHang_KhachHang" FromRole="DonHang" ToRole="KhachHang" />
+    <Property Name="DaDat" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="GaDen">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaGa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TenGa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ChangTaus" Relationship="BanVeTauModel.FK_ChangTau_GaDen" FromRole="GaDen" ToRole="ChangTau" />
+  </EntityType>
+  <EntityType Name="GaDi">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaGa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TenGa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ChangTaus" Relationship="BanVeTauModel.FK_ChangTau_GaDi" FromRole="GaDi" ToRole="ChangTau" />
+  </EntityType>
+  <EntityType Name="KhachHang">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GioiTinh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SDT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CMT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="DonHangs" Relationship="BanVeTauModel.FK_DonHang_KhachHang" FromRole="KhachHang" ToRole="DonHang" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Pass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsLocked" Type="Boolean" />
+  </EntityType>
+  <Association Name="FK_ChangTau_GaDen">
+    <End Type="BanVeTauModel.GaDen" Role="GaDen" Multiplicity="0..1" />
+    <End Type="BanVeTauModel.ChangTau" Role="ChangTau" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GaDen">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ChangTau">
+        <PropertyRef Name="DiemDen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChangTau_GaDi">
+    <End Type="BanVeTauModel.GaDi" Role="GaDi" Multiplicity="0..1" />
+    <End Type="BanVeTauModel.ChangTau" Role="ChangTau" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GaDi">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ChangTau">
+        <PropertyRef Name="DiemDi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DonHang_ChangTau">
+    <End Type="BanVeTauModel.ChangTau" Role="ChangTau" Multiplicity="0..1" />
+    <End Type="BanVeTauModel.DonHang" Role="DonHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChangTau">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DonHang">
+        <PropertyRef Name="ChangId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DonHang_KhachHang">
+    <End Type="BanVeTauModel.KhachHang" Role="KhachHang" Multiplicity="0..1" />
+    <End Type="BanVeTauModel.DonHang" Role="DonHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachHang">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DonHang">
+        <PropertyRef Name="KhachHangId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

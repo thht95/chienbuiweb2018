@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BanVeTauModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ChangTau">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaChuyenDi" Type="nvarchar" MaxLength="50" />
+    <Property Name="TenChuyenDi" Type="nvarchar" MaxLength="50" />
+    <Property Name="DiemDi" Type="int" />
+    <Property Name="DiemDen" Type="int" />
+    <Property Name="NgayDi" Type="datetime" />
+    <Property Name="NgayDen" Type="datetime" />
+    <Property Name="SoLuongChang" Type="int" />
+    <Property Name="GiaVe" Type="int" />
+    <Property Name="DaDat" Type="bit" />
+    <Property Name="IsLocked" Type="bit" />
+  </EntityType>
+  <EntityType Name="DonHang">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KhachHangId" Type="int" />
+    <Property Name="ChangId" Type="int" />
+    <Property Name="DaDat" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="GaDen">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaGa" Type="nvarchar" MaxLength="50" />
+    <Property Name="TenGa" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="GaDi">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaGa" Type="nvarchar" MaxLength="50" />
+    <Property Name="TenGa" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="KhachHang">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HoTen" Type="nvarchar" MaxLength="50" />
+    <Property Name="GioiTinh" Type="nvarchar" MaxLength="50" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="SDT" Type="nvarchar" MaxLength="50" />
+    <Property Name="CMT" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Pass" Type="nvarchar" MaxLength="50" />
+    <Property Name="Role" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsLocked" Type="bit" />
+  </EntityType>
+  <Association Name="FK_ChangTau_GaDen">
+    <End Role="GaDen" Type="Self.GaDen" Multiplicity="0..1" />
+    <End Role="ChangTau" Type="Self.ChangTau" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GaDen">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ChangTau">
+        <PropertyRef Name="DiemDen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChangTau_GaDi">
+    <End Role="GaDi" Type="Self.GaDi" Multiplicity="0..1" />
+    <End Role="ChangTau" Type="Self.ChangTau" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GaDi">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ChangTau">
+        <PropertyRef Name="DiemDi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DonHang_ChangTau">
+    <End Role="ChangTau" Type="Self.ChangTau" Multiplicity="0..1" />
+    <End Role="DonHang" Type="Self.DonHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChangTau">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DonHang">
+        <PropertyRef Name="ChangId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DonHang_KhachHang">
+    <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="0..1" />
+    <End Role="DonHang" Type="Self.DonHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachHang">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DonHang">
+        <PropertyRef Name="KhachHangId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="ThemDonHang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="KhachHangID" Type="int" Mode="In" />
+    <Parameter Name="ChangID" Type="int" Mode="In" />
+    <Parameter Name="DaDat" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="BanVeTauModelStoreContainer">
+    <EntitySet Name="ChangTau" EntityType="Self.ChangTau" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DonHang" EntityType="Self.DonHang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GaDen" EntityType="Self.GaDen" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GaDi" EntityType="Self.GaDi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KhachHang" EntityType="Self.KhachHang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_ChangTau_GaDen" Association="Self.FK_ChangTau_GaDen">
+      <End Role="GaDen" EntitySet="GaDen" />
+      <End Role="ChangTau" EntitySet="ChangTau" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChangTau_GaDi" Association="Self.FK_ChangTau_GaDi">
+      <End Role="GaDi" EntitySet="GaDi" />
+      <End Role="ChangTau" EntitySet="ChangTau" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DonHang_ChangTau" Association="Self.FK_DonHang_ChangTau">
+      <End Role="ChangTau" EntitySet="ChangTau" />
+      <End Role="DonHang" EntitySet="DonHang" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DonHang_KhachHang" Association="Self.FK_DonHang_KhachHang">
+      <End Role="KhachHang" EntitySet="KhachHang" />
+      <End Role="DonHang" EntitySet="DonHang" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
